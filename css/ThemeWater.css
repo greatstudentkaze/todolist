@@ -1,0 +1,179 @@
+@font-face {
+    font-family: "Open Sans";  
+    src: url("../fonts/OpenSans-Regular.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Open Sans";  
+    src: url("../fonts/OpenSans-Bold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Open Sans";  
+    src: url("../fonts/OpenSans-SemiBold.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: semibold;
+}
+@font-face {
+    font-family: "Open Sans";  
+    src: url("../fonts/OpenSans-Italic.ttf") format("truetype"); 
+    font-style: italic; 
+    font-weight: normal;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: semibold;
+}
+main {
+    height: 100vh;
+    background: url('../img/backgroundWT.jpg') no-repeat;
+    background-size: cover;
+    position: relative;
+}
+main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(52, 131, 167, 0.5);
+}
+main .center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+}
+.doneWrapper, .todoWrapper {
+    background: #fff;
+    color: rgb(29,35,59);
+    font-weight: normal;
+    border-radius: 8px;
+    padding: 50px 40px;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+.doneWrapper h3, .todoWrapper h3 {
+    text-align: center;
+    font-weight: 700;
+    color: rgb(42,51,82);
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+.doneTasks-body label {
+    color: rgba(29, 35, 59, 0.5);
+    text-decoration: line-through;
+    text-decoration-color: rgb(29, 35, 59);
+}
+.doneTasks-body textarea {
+    color: rgba(29, 35, 59, 0.5);
+    text-decoration: line-through;
+}
+.lpd {margin-left: 20px;}
+.underLabel[readonly]{
+    background: #fff;
+    border: none;
+    resize: none;
+    font-size: 0.6em;
+    line-height: 1.5em;
+    margin-top: 5px;
+}
+.todoTasks-footer , .doneTasks-footer {
+    margin-top: 30px;
+    display:flex;
+    justify-content: flex-end;
+
+}
+#OMAddNewTask {
+    padding: 10px 20px;
+}
+#newTask-label, #editTask-label, #newTask-desc, #editTask-desc {    
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    border: 2px solid rgb(42, 51, 82);
+    border-radius: 5px;
+}
+#newTask-desc, #editTask-desc {
+    resize: none;
+}
+@media (min-width: 768px) and (max-width: 992px){
+	.underLabel[readonly] {
+        max-height: 50em;
+        max-width: 12em;
+    }
+    .todoWrapper h3, .doneWrapper h3 {
+        font-size: 1.8em;
+    }
+    #label {
+        font-size: 0.55em;
+        text-decoration: underline;
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px){
+    #label {
+        font-size: 0.85em;
+    }
+	.underLabel[readonly] {
+        max-height: 50em;
+        max-width: 12em;
+    }
+    .todoWrapper h3, .doneWrapper h3 {
+        font-size: 1.8em;
+    }
+}
+@media (min-width: 455px) and (max-width: 576px){
+    #label {
+        font-size: 0.8em;
+    }
+	.underLabel[readonly] {
+        max-height: 50em;
+        max-width: 12em;
+    }
+    .todoWrapper h3, .doneWrapper h3 {
+        font-size: 1.8em;
+    }
+}
+@media (min-width: 0px) and (max-width: 400px){
+    #label {
+        font-size: 0.5em;
+    }
+	.underLabel[readonly] {
+        max-height: 50em;
+        max-width: 12em;
+        font-size: 0.5em;
+    }
+    .todoWrapper h3, .doneWrapper h3  {
+        font-size: 1.5em;
+    }
+    .btns {
+        font-size: 0.7em;
+        margin: 0px;
+    }
+    .todoWrapper , .doneWrapper {
+        font-size: 1.1em;
+    }
+}
+@media (min-width: 400px) and (max-width: 455px){
+    #label {
+        font-size: 0.7em;
+    }
+	.underLabel[readonly] {
+        max-height: 50em;
+        max-width: 12em;
+        font-size: 0.5em;
+    }
+    .todoWrapper h3, .doneWrapper h3  {
+        font-size: 1.5em;
+    }
+    .btns {
+        font-size: 0.7em;
+        margin: 0px;
+    }
+    .todoWrapper , .doneWrapper {
+        font-size: 1.1em;
+    }
+}
+
